@@ -1,0 +1,73 @@
+body {
+  margin: 0 auto;
+  font-family: 'Open Sans', sans-serif;
+}
+
+label {
+
+}
+
+label:hover {
+  background:#ccc;
+}
+
+input {
+  margin-right:1em;
+  display: none;
+}
+
+#main-container {
+  display: flex;
+}
+
+#team-list {
+  display: flex;
+  flex-direction: column;
+}
+
+#home-score-buttons {
+  display: flex;
+  flex-direction: column;
+}
+
+#away-score-buttons {
+  display: flex;
+  flex-direction: column;
+}
+
+.team-buttons {
+  border: 1px solid black;
+  display: flex;
+  flex-direction: column;
+}
+
+input[type="radio"]:checked + span#team-names {
+  font-weight: bold;
+  box-shadow: 1px 1px 5px #555 inset;
+  background: #44a1ee;
+}
+
+span#team-names {
+  color: black;
+  background: #89C4F4;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+span#team-names:hover {
+  color: black;
+  background: #89C4F4;
+  cursor: pointer;
+  padding: 1em;
+  transition: 0.5s;
+}
+
+
+span#home-goals, #away-goals {
+  color: black;
+  padding: 1em;
+  padding-left: 0px;
+  background: #89C4F4;
+  cursor: pointer;
+  padding: 1em;
+}

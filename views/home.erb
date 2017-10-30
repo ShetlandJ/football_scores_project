@@ -1,0 +1,54 @@
+<div id="main-container">
+
+  <div id="team-list">
+
+    <% for team in @teams %>
+
+    <div id="team-buttons">
+
+      <label class="team-buttons">
+        <input type="radio" name="team" value="<%= team %>">
+        <span id="team-names">
+          <%= team %>
+        </span>
+      </label>
+    </div>
+
+    <% end %>
+  </div>
+
+  <div id="team-list">
+
+    <% for score in @home_score %>
+
+    <div id="team-buttons">
+
+      <label class="team-buttons">
+        <input type="radio" name="home_score" value="<%= score %>">
+        <span id="home-goals">
+          <%= score %>
+        </span>
+      </label>
+    </div>
+
+    <% end %>
+  </div>
+
+  <div id="team-list">
+
+    <% for score in @away_score %>
+
+    <div id="team-buttons">
+
+      <label class="team-buttons">
+        <input type="radio" name="away_score" value="<%= score %>">
+        <span id="away-goals">
+          <%= score %>
+        </span>
+      </label>
+    </div>
+
+    <% end %>
+  </div>
+
+</div>

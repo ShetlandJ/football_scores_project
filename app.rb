@@ -3,10 +3,12 @@ require('sinatra/contrib/all')
 require('date')
 
 require_relative('./models/Fixture')
-require_relative('./controllers/fixtures_controller')
+# require_relative('./controllers/fixtures_controller')
 
 get '/' do
-  @teams = Fixtures.all()
+  @teams = Fixture.all_teams()
+  @home_score = Fixture.get_home_goals()
+  @away_score = Fixture.get_away_goals()
   erb ( :home )
 end
 

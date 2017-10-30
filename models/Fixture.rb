@@ -74,6 +74,14 @@ class Fixture
       return fixtures.map { |fixture| Fixture.new( fixture ) }
     end
 
+    def self.all_teams()
+      sql = "SELECT home_team FROM fixtures GROUP BY(home_team) ORDER BY home_team;"
+      values = []
+      teams = SqlRunner.run( sql, values )
+      team_map = teams.map { |team| team["home_team"] }
+      return team_map
+    end
+
     def self.find( id )
       sql = "SELECT * FROM fixtures WHERE id = $1"
       values = [id]
@@ -113,7 +121,7 @@ class Fixture
     end
 
     def self.find_all_results_by_away_team_by_score( away_team, home_score, away_score )
-      sql = "SELECT * FROM fixtures WHERE home_team = $1 AND home_team_goals = $2 AND away_team_goals = $3 ORDER BY fixture_date"
+      sql = "SELECT * FROM fixtures WHERE away_team = $1 AND home_team_goals = $2 AND away_team_goals = $3 ORDER BY fixture_date"
       values = [@home_team, @home_team_goals, @away_team_goals]
       fixtures = SqlRunner.run( sql, values )
       return fixtures.map { |fixture| Fixture.new( fixture ) }
@@ -133,4 +141,20 @@ class Fixture
       return fixtures
     end
 
-end
+    def self.get_home_goals()
+      sql = "SELECT home_team_goals FROM fixtures GROUP BY(home_team_goals) ORDER BY home_team_goals;"
+      values = []
+      teams = SqlRunner.run( sql, values )
+      team_map = teams.map { |team| team["home_team_goals"] }
+      return team_map
+    end
+
+    def self.get_away_goals()
+      sql = "SELECT away_team_goals FROM fixtures GROUP BY(away_team_goals) ORDER BY away_team_goals;"
+      values = []
+      teams = SqlRunner.run( sql, values )
+      team_map = teams.map { |team| team["away_team_goals"] }
+      return team_map
+    end
+
+  end
