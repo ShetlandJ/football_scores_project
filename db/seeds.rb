@@ -1,9 +1,6 @@
 require_relative('../models/Fixture')
 require('pry-byebug')
 
-# Transaction.delete_all()
-# Vendor.delete_all()
-# Tag.delete_all()
 Fixture.delete_all()
 
 #### 16-17 ####
