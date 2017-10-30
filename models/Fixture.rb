@@ -97,4 +97,40 @@ class Fixture
       result = Fixture.new( fixtures.first )
       return result
     end
+
+    def self.find_by_result( home_score, away_score )
+      sql = "SELECT * FROM fixtures WHERE home_team_goals = $1 AND away_team_goals = $2"
+      values = [@home_team_goals, @away_team_goals]
+      fixtures = SqlRunner.run( sql, values )
+      return fixtures.map { |fixture| Fixture.new( fixture ) }
+    end
+
+    def self.find_all_results_by_home_team_by_score( home_team, home_score, away_score )
+      sql = "SELECT * FROM fixtures WHERE home_team = $1 AND home_team_goals = $2 AND away_team_goals = $3 ORDER BY fixture_date DESC"
+      values = [@home_team, @home_team_goals, @away_team_goals]
+      fixtures = SqlRunner.run( sql, values )
+      return fixtures.map { |fixture| Fixture.new( fixture ) }
+    end
+
+    def self.find_all_results_by_away_team_by_score( away_team, home_score, away_score )
+      sql = "SELECT * FROM fixtures WHERE home_team = $1 AND home_team_goals = $2 AND away_team_goals = $3 ORDER BY fixture_date"
+      values = [@home_team, @home_team_goals, @away_team_goals]
+      fixtures = SqlRunner.run( sql, values )
+      return fixtures.map { |fixture| Fixture.new( fixture ) }
+    end
+
+    def self.find_most_recent_result_by_home_team( home_team, home_score, away_score )
+      sql = "SELECT * FROM fixtures WHERE home_team = $1 AND home_team_goals = $2 AND away_team_goals = $3 ORDER BY fixture_date DESC LIMIT 1"
+      values = [@home_team, @home_team_goals, @away_team_goals]
+      fixtures = SqlRunner.run( sql, values )
+      return fixtures
+    end
+
+    def self.find_most_recent_result_by_away_team( away_team, home_score, away_score )
+      sql = "SELECT * FROM fixtures WHERE away_team = $1 AND home_team_goals = $2 AND away_team_goals = $3 ORDER BY fixture_date DESC LIMIT 1"
+      values = [@away_team, @home_team_goals, @away_team_goals]
+      fixtures = SqlRunner.run( sql, values )
+      return fixtures
+    end
+
 end
