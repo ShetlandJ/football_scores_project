@@ -20,7 +20,7 @@ input {
   display: flex;
 }
 
-#team-list {
+#home-team-list {
   display: flex;
   flex-direction: column;
 }
@@ -28,9 +28,15 @@ input {
 #home-score-buttons {
   display: flex;
   flex-direction: column;
+  margin: 0 10px 0 10px;
 }
 
 #away-score-buttons {
+  display: flex;
+  flex-direction: column;
+  margin: 0 10px 0 10px;
+}
+#away-team-list {
   display: flex;
   flex-direction: column;
 }
@@ -41,10 +47,36 @@ input {
   flex-direction: column;
 }
 
+.home.buttons {
+  border: 1px solid black;
+  display: flex;
+  flex-direction: column;
+}
+
+.away-buttons {
+  border: 1px solid black;
+  display: flex;
+  flex-direction: column;
+}
+
 input[type="radio"]:checked + span#team-names {
   font-weight: bold;
   box-shadow: 1px 1px 5px #555 inset;
   background: #44a1ee;
+}
+
+input[type="radio"]:checked + span#home-goals {
+  font-weight: bold;
+  box-shadow: 1px 1px 5px #555 inset;
+  background: #44a1ee;
+  transition: 0.5s;
+}
+
+input[type="radio"]:checked + span#away-goals {
+  font-weight: bold;
+  box-shadow: 1px 1px 5px #555 inset;
+  background: #44a1ee;
+  transition: 0.5s;
 }
 
 span#team-names {
@@ -58,10 +90,10 @@ span#team-names:hover {
   color: black;
   background: #89C4F4;
   cursor: pointer;
-  padding: 1em;
+  padding: 3em;
+  font-size: 24px;
   transition: 0.5s;
 }
-
 
 span#home-goals, #away-goals {
   color: black;
@@ -70,4 +102,8 @@ span#home-goals, #away-goals {
   background: #89C4F4;
   cursor: pointer;
   padding: 1em;
+}
+
+#submit {
+  display:block;
 }

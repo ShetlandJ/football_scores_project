@@ -1,13 +1,14 @@
+<form action="/fixtures" method="GET" id="form">
 <div id="main-container">
 
-  <div id="team-list">
+  <div id="home-team-list">
 
     <% for team in @teams %>
 
     <div id="team-buttons">
 
       <label class="team-buttons">
-        <input type="radio" name="team" value="<%= team %>">
+        <input type="radio" name="home_team" value="<%= team %>">
         <span id="team-names">
           <%= team %>
         </span>
@@ -17,7 +18,7 @@
     <% end %>
   </div>
 
-  <div id="team-list">
+  <div id="home-score-list">
 
     <% for score in @home_score %>
 
@@ -34,7 +35,7 @@
     <% end %>
   </div>
 
-  <div id="team-list">
+  <div id="away-score-list">
 
     <% for score in @away_score %>
 
@@ -51,4 +52,23 @@
     <% end %>
   </div>
 
+  <div id="away-team-list">
+
+    <% for team in @teams %>
+
+    <div id="team-buttons">
+
+      <label class="team-buttons">
+        <input type="radio" name="away_team" value="<%= team %>">
+        <span id="team-names">
+          <%= team %>
+        </span>
+      </label>
+    </div>
+
+    <% end %>
+  </div>
+  <input type="submit" value="Search" id="submit">
+
+</form>
 </div>
