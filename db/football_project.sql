@@ -1,3 +1,5 @@
+CREATE DATABASE IF NOT EXISTS football_scores;
+
 DROP TABLE IF EXISTS fixtures;
 
 CREATE TABLE fixtures (

@@ -1,5 +1,4 @@
 require_relative('../models/Fixture')
-require('pry-byebug')
 
 Fixture.delete_all()
 
@@ -9231,84 +9230,81 @@ Fixture.new({"fixture_date"=>"02/04/94", "home_team"=>"Liverpool", "away_team"=>
 Fixture.new({"fixture_date"=>"02/04/94", "home_team"=>"Man City", "away_team"=>"Aston Villa", "home_team_goals"=>"3", "away_team_goals"=>"0"}).save
 Fixture.new({"fixture_date"=>"02/04/94", "home_team"=>"Norwich", "away_team"=>"Tottenham", "home_team_goals"=>"1", "away_team_goals"=>"2"}).save
 Fixture.new({"fixture_date"=>"02/04/94", "home_team"=>"Oldham", "away_team"=>"QPR", "home_team_goals"=>"4", "away_team_goals"=>"1"}).save
-# Fixture.new({"fixture_date"=>"02/04/94", "home_team"=>"Sheffield Wednesday", "away_team"=>"Everton", "home_team_goals"=>"5", "away_team_goals"=>"1"}).save
-# Fixture.new({"fixture_date"=>"02/04/94", "home_team"=>"West Ham", "away_team"=>"Ipswich", "home_team_goals"=>"2", "away_team_goals"=>"1"}).save
-# Fixture.new({"fixture_date"=>"04/04/94", "home_team"=>"Aston Villa", "away_team"=>"Norwich", "home_team_goals"=>"0", "away_team_goals"=>"0"}).save
-# Fixture.new({"fixture_date"=>"04/04/94", "home_team"=>"Everton", "away_team"=>"Blackburn", "home_team_goals"=>"0", "away_team_goals"=>"3"}).save
-# Fixture.new({"fixture_date"=>"04/04/94", "home_team"=>"Ipswich", "away_team"=>"Coventry", "home_team_goals"=>"0", "away_team_goals"=>"2"}).save
-# Fixture.new({"fixture_date"=>"04/04/94", "home_team"=>"Man United", "away_team"=>"Oldham", "home_team_goals"=>"3", "away_team_goals"=>"2"}).save
-# Fixture.new({"fixture_date"=>"04/04/94", "home_team"=>"Newcastle", "away_team"=>"Chelsea", "home_team_goals"=>"0", "away_team_goals"=>"0"}).save
-# Fixture.new({"fixture_date"=>"04/04/94", "home_team"=>"QPR", "away_team"=>"Leeds", "home_team_goals"=>"0", "away_team_goals"=>"4"}).save
-# Fixture.new({"fixture_date"=>"04/04/94", "home_team"=>"Sheffield United", "away_team"=>"Arsenal", "home_team_goals"=>"1", "away_team_goals"=>"1"}).save
-# Fixture.new({"fixture_date"=>"04/04/94", "home_team"=>"Southampton", "away_team"=>"Man City", "home_team_goals"=>"0", "away_team_goals"=>"1"}).save
-# Fixture.new({"fixture_date"=>"04/04/94", "home_team"=>"Swindon", "away_team"=>"Sheffield Wednesday", "home_team_goals"=>"0", "away_team_goals"=>"1"}).save
-# Fixture.new({"fixture_date"=>"04/04/94", "home_team"=>"Tottenham", "away_team"=>"West Ham", "home_team_goals"=>"1", "away_team_goals"=>"4"}).save
-# Fixture.new({"fixture_date"=>"04/04/94", "home_team"=>"Wimbledon", "away_team"=>"Liverpool", "home_team_goals"=>"1", "away_team_goals"=>"1"}).save
-# Fixture.new({"fixture_date"=>"09/04/94", "home_team"=>"Coventry", "away_team"=>"Tottenham", "home_team_goals"=>"1", "away_team_goals"=>"0"}).save
-# Fixture.new({"fixture_date"=>"09/04/94", "home_team"=>"Liverpool", "away_team"=>"Ipswich", "home_team_goals"=>"1", "away_team_goals"=>"0"}).save
-# Fixture.new({"fixture_date"=>"09/04/94", "home_team"=>"Man City", "away_team"=>"Newcastle", "home_team_goals"=>"2", "away_team_goals"=>"1"}).save
-# Fixture.new({"fixture_date"=>"09/04/94", "home_team"=>"Norwich", "away_team"=>"Southampton", "home_team_goals"=>"4", "away_team_goals"=>"5"}).save
-# Fixture.new({"fixture_date"=>"09/04/94", "home_team"=>"Sheffield Wednesday", "away_team"=>"QPR", "home_team_goals"=>"3", "away_team_goals"=>"1"}).save
-# Fixture.new({"fixture_date"=>"09/04/94", "home_team"=>"West Ham", "away_team"=>"Everton", "home_team_goals"=>"0", "away_team_goals"=>"1"}).save
-# Fixture.new({"fixture_date"=>"11/04/94", "home_team"=>"Blackburn", "away_team"=>"Aston Villa", "home_team_goals"=>"1", "away_team_goals"=>"0"}).save
-# Fixture.new({"fixture_date"=>"13/04/94", "home_team"=>"QPR", "away_team"=>"Chelsea", "home_team_goals"=>"1", "away_team_goals"=>"1"}).save
-# Fixture.new({"fixture_date"=>"16/04/94", "home_team"=>"Arsenal", "away_team"=>"Chelsea", "home_team_goals"=>"1", "away_team_goals"=>"0"}).save
-# Fixture.new({"fixture_date"=>"16/04/94", "home_team"=>"Coventry", "away_team"=>"Sheffield Wednesday", "home_team_goals"=>"1", "away_team_goals"=>"1"}).save
-# Fixture.new({"fixture_date"=>"16/04/94", "home_team"=>"Ipswich", "away_team"=>"Swindon", "home_team_goals"=>"1", "away_team_goals"=>"1"}).save
-# Fixture.new({"fixture_date"=>"16/04/94", "home_team"=>"Liverpool", "away_team"=>"Newcastle", "home_team_goals"=>"0", "away_team_goals"=>"2"}).save
-# Fixture.new({"fixture_date"=>"16/04/94", "home_team"=>"Man City", "away_team"=>"Norwich", "home_team_goals"=>"1", "away_team_goals"=>"1"}).save
-# Fixture.new({"fixture_date"=>"16/04/94", "home_team"=>"Oldham", "away_team"=>"West Ham", "home_team_goals"=>"1", "away_team_goals"=>"2"}).save
-# Fixture.new({"fixture_date"=>"16/04/94", "home_team"=>"QPR", "away_team"=>"Everton", "home_team_goals"=>"2", "away_team_goals"=>"1"}).save
-# Fixture.new({"fixture_date"=>"16/04/94", "home_team"=>"Sheffield United", "away_team"=>"Aston Villa", "home_team_goals"=>"1", "away_team_goals"=>"2"}).save
-# Fixture.new({"fixture_date"=>"16/04/94", "home_team"=>"Southampton", "away_team"=>"Blackburn", "home_team_goals"=>"3", "away_team_goals"=>"1"}).save
-# Fixture.new({"fixture_date"=>"16/04/94", "home_team"=>"Wimbledon", "away_team"=>"Man United", "home_team_goals"=>"1", "away_team_goals"=>"0"}).save
-# Fixture.new({"fixture_date"=>"17/04/94", "home_team"=>"Leeds", "away_team"=>"Tottenham", "home_team_goals"=>"2", "away_team_goals"=>"0"}).save
-# Fixture.new({"fixture_date"=>"19/04/94", "home_team"=>"Arsenal", "away_team"=>"Wimbledon", "home_team_goals"=>"1", "away_team_goals"=>"1"}).save
-# Fixture.new({"fixture_date"=>"23/04/94", "home_team"=>"Aston Villa", "away_team"=>"Arsenal", "home_team_goals"=>"1", "away_team_goals"=>"2"}).save
-# Fixture.new({"fixture_date"=>"23/04/94", "home_team"=>"Chelsea", "away_team"=>"Leeds", "home_team_goals"=>"1", "away_team_goals"=>"1"}).save
-# Fixture.new({"fixture_date"=>"23/04/94", "home_team"=>"Everton", "away_team"=>"Coventry", "home_team_goals"=>"0", "away_team_goals"=>"0"}).save
-# Fixture.new({"fixture_date"=>"23/04/94", "home_team"=>"Man United", "away_team"=>"Man City", "home_team_goals"=>"2", "away_team_goals"=>"0"}).save
-# Fixture.new({"fixture_date"=>"23/04/94", "home_team"=>"Newcastle", "away_team"=>"Oldham", "home_team_goals"=>"3", "away_team_goals"=>"2"}).save
-# Fixture.new({"fixture_date"=>"23/04/94", "home_team"=>"Norwich", "away_team"=>"Sheffield United", "home_team_goals"=>"0", "away_team_goals"=>"1"}).save
-# Fixture.new({"fixture_date"=>"23/04/94", "home_team"=>"Sheffield Wednesday", "away_team"=>"Ipswich", "home_team_goals"=>"5", "away_team_goals"=>"0"}).save
-# Fixture.new({"fixture_date"=>"23/04/94", "home_team"=>"Swindon", "away_team"=>"Wimbledon", "home_team_goals"=>"2", "away_team_goals"=>"4"}).save
-# Fixture.new({"fixture_date"=>"23/04/94", "home_team"=>"Tottenham", "away_team"=>"Southampton", "home_team_goals"=>"3", "away_team_goals"=>"0"}).save
-# Fixture.new({"fixture_date"=>"23/04/94", "home_team"=>"West Ham", "away_team"=>"Liverpool", "home_team_goals"=>"1", "away_team_goals"=>"2"}).save
-# Fixture.new({"fixture_date"=>"24/04/94", "home_team"=>"Blackburn", "away_team"=>"QPR", "home_team_goals"=>"1", "away_team_goals"=>"1"}).save
-# Fixture.new({"fixture_date"=>"26/04/94", "home_team"=>"Wimbledon", "away_team"=>"Oldham", "home_team_goals"=>"3", "away_team_goals"=>"0"}).save
-# Fixture.new({"fixture_date"=>"27/04/94", "home_team"=>"Chelsea", "away_team"=>"Swindon", "home_team_goals"=>"2", "away_team_goals"=>"0"}).save
-# Fixture.new({"fixture_date"=>"27/04/94", "home_team"=>"Leeds", "away_team"=>"Man United", "home_team_goals"=>"0", "away_team_goals"=>"2"}).save
-# Fixture.new({"fixture_date"=>"27/04/94", "home_team"=>"Newcastle", "away_team"=>"Aston Villa", "home_team_goals"=>"5", "away_team_goals"=>"1"}).save
-# Fixture.new({"fixture_date"=>"27/04/94", "home_team"=>"QPR", "away_team"=>"Arsenal", "home_team_goals"=>"1", "away_team_goals"=>"1"}).save
-# Fixture.new({"fixture_date"=>"27/04/94", "home_team"=>"West Ham", "away_team"=>"Blackburn", "home_team_goals"=>"1", "away_team_goals"=>"2"}).save
-# Fixture.new({"fixture_date"=>"30/04/94", "home_team"=>"Arsenal", "away_team"=>"West Ham", "home_team_goals"=>"0", "away_team_goals"=>"2"}).save
-# Fixture.new({"fixture_date"=>"30/04/94", "home_team"=>"Leeds", "away_team"=>"Everton", "home_team_goals"=>"3", "away_team_goals"=>"0"}).save
-# Fixture.new({"fixture_date"=>"30/04/94", "home_team"=>"Liverpool", "away_team"=>"Norwich", "home_team_goals"=>"0", "away_team_goals"=>"1"}).save
-# Fixture.new({"fixture_date"=>"30/04/94", "home_team"=>"Man City", "away_team"=>"Chelsea", "home_team_goals"=>"2", "away_team_goals"=>"2"}).save
-# Fixture.new({"fixture_date"=>"30/04/94", "home_team"=>"Oldham", "away_team"=>"Sheffield Wednesday", "home_team_goals"=>"0", "away_team_goals"=>"0"}).save
-# Fixture.new({"fixture_date"=>"30/04/94", "home_team"=>"QPR", "away_team"=>"Swindon", "home_team_goals"=>"1", "away_team_goals"=>"3"}).save
-# Fixture.new({"fixture_date"=>"30/04/94", "home_team"=>"Sheffield United", "away_team"=>"Newcastle", "home_team_goals"=>"2", "away_team_goals"=>"0"}).save
-# Fixture.new({"fixture_date"=>"30/04/94", "home_team"=>"Southampton", "away_team"=>"Aston Villa", "home_team_goals"=>"4", "away_team_goals"=>"1"}).save
-# Fixture.new({"fixture_date"=>"30/04/94", "home_team"=>"Wimbledon", "away_team"=>"Tottenham", "home_team_goals"=>"2", "away_team_goals"=>"1"}).save
-# Fixture.new({"fixture_date"=>"01/05/94", "home_team"=>"Ipswich", "away_team"=>"Man United", "home_team_goals"=>"1", "away_team_goals"=>"2"}).save
-# Fixture.new({"fixture_date"=>"02/05/94", "home_team"=>"Coventry", "away_team"=>"Blackburn", "home_team_goals"=>"2", "away_team_goals"=>"1"}).save
-# Fixture.new({"fixture_date"=>"03/05/94", "home_team"=>"Leeds", "away_team"=>"Sheffield Wednesday", "home_team_goals"=>"2", "away_team_goals"=>"2"}).save
-# Fixture.new({"fixture_date"=>"03/05/94", "home_team"=>"Oldham", "away_team"=>"Sheffield United", "home_team_goals"=>"1", "away_team_goals"=>"1"}).save
-# Fixture.new({"fixture_date"=>"03/05/94", "home_team"=>"QPR", "away_team"=>"West Ham", "home_team_goals"=>"0", "away_team_goals"=>"0"}).save
-# Fixture.new({"fixture_date"=>"04/05/94", "home_team"=>"Chelsea", "away_team"=>"Coventry", "home_team_goals"=>"1", "away_team_goals"=>"2"}).save
-# Fixture.new({"fixture_date"=>"04/05/94", "home_team"=>"Man United", "away_team"=>"Southampton", "home_team_goals"=>"2", "away_team_goals"=>"0"}).save
-# Fixture.new({"fixture_date"=>"05/05/94", "home_team"=>"Oldham", "away_team"=>"Tottenham", "home_team_goals"=>"0", "away_team_goals"=>"2"}).save
-# Fixture.new({"fixture_date"=>"07/05/94", "home_team"=>"Aston Villa", "away_team"=>"Liverpool", "home_team_goals"=>"2", "away_team_goals"=>"1"}).save
-# Fixture.new({"fixture_date"=>"07/05/94", "home_team"=>"Blackburn", "away_team"=>"Ipswich", "home_team_goals"=>"0", "away_team_goals"=>"0"}).save
-# Fixture.new({"fixture_date"=>"07/05/94", "home_team"=>"Chelsea", "away_team"=>"Sheffield United", "home_team_goals"=>"3", "away_team_goals"=>"2"}).save
-# Fixture.new({"fixture_date"=>"07/05/94", "home_team"=>"Everton", "away_team"=>"Wimbledon", "home_team_goals"=>"3", "away_team_goals"=>"2"}).save
-# Fixture.new({"fixture_date"=>"07/05/94", "home_team"=>"Newcastle", "away_team"=>"Arsenal", "home_team_goals"=>"2", "away_team_goals"=>"0"}).save
-# Fixture.new({"fixture_date"=>"07/05/94", "home_team"=>"Norwich", "away_team"=>"Oldham", "home_team_goals"=>"1", "away_team_goals"=>"1"}).save
-# Fixture.new({"fixture_date"=>"07/05/94", "home_team"=>"Sheffield Wednesday", "away_team"=>"Man City", "home_team_goals"=>"1", "away_team_goals"=>"1"}).save
-# Fixture.new({"fixture_date"=>"07/05/94", "home_team"=>"Swindon", "away_team"=>"Leeds", "home_team_goals"=>"0", "away_team_goals"=>"5"}).save
-# Fixture.new({"fixture_date"=>"07/05/94", "home_team"=>"Tottenham", "away_team"=>"QPR", "home_team_goals"=>"1", "away_team_goals"=>"2"}).save
-# Fixture.new({"fixture_date"=>"07/05/94", "home_team"=>"West Ham", "away_team"=>"Southampton", "home_team_goals"=>"3", "away_team_goals"=>"3"}).save
-# Fixture.new({"fixture_date"=>"08/05/94", "home_team"=>"Man United", "away_team"=>"Coventry", "home_team_goals"=>"0", "away_team_goals"=>"0"}).save
-#
-pry.binding
-nil
+Fixture.new({"fixture_date"=>"02/04/94", "home_team"=>"Sheffield Wednesday", "away_team"=>"Everton", "home_team_goals"=>"5", "away_team_goals"=>"1"}).save
+Fixture.new({"fixture_date"=>"02/04/94", "home_team"=>"West Ham", "away_team"=>"Ipswich", "home_team_goals"=>"2", "away_team_goals"=>"1"}).save
+Fixture.new({"fixture_date"=>"04/04/94", "home_team"=>"Aston Villa", "away_team"=>"Norwich", "home_team_goals"=>"0", "away_team_goals"=>"0"}).save
+Fixture.new({"fixture_date"=>"04/04/94", "home_team"=>"Everton", "away_team"=>"Blackburn", "home_team_goals"=>"0", "away_team_goals"=>"3"}).save
+Fixture.new({"fixture_date"=>"04/04/94", "home_team"=>"Ipswich", "away_team"=>"Coventry", "home_team_goals"=>"0", "away_team_goals"=>"2"}).save
+Fixture.new({"fixture_date"=>"04/04/94", "home_team"=>"Man United", "away_team"=>"Oldham", "home_team_goals"=>"3", "away_team_goals"=>"2"}).save
+Fixture.new({"fixture_date"=>"04/04/94", "home_team"=>"Newcastle", "away_team"=>"Chelsea", "home_team_goals"=>"0", "away_team_goals"=>"0"}).save
+Fixture.new({"fixture_date"=>"04/04/94", "home_team"=>"QPR", "away_team"=>"Leeds", "home_team_goals"=>"0", "away_team_goals"=>"4"}).save
+Fixture.new({"fixture_date"=>"04/04/94", "home_team"=>"Sheffield United", "away_team"=>"Arsenal", "home_team_goals"=>"1", "away_team_goals"=>"1"}).save
+Fixture.new({"fixture_date"=>"04/04/94", "home_team"=>"Southampton", "away_team"=>"Man City", "home_team_goals"=>"0", "away_team_goals"=>"1"}).save
+Fixture.new({"fixture_date"=>"04/04/94", "home_team"=>"Swindon", "away_team"=>"Sheffield Wednesday", "home_team_goals"=>"0", "away_team_goals"=>"1"}).save
+Fixture.new({"fixture_date"=>"04/04/94", "home_team"=>"Tottenham", "away_team"=>"West Ham", "home_team_goals"=>"1", "away_team_goals"=>"4"}).save
+Fixture.new({"fixture_date"=>"04/04/94", "home_team"=>"Wimbledon", "away_team"=>"Liverpool", "home_team_goals"=>"1", "away_team_goals"=>"1"}).save
+Fixture.new({"fixture_date"=>"09/04/94", "home_team"=>"Coventry", "away_team"=>"Tottenham", "home_team_goals"=>"1", "away_team_goals"=>"0"}).save
+Fixture.new({"fixture_date"=>"09/04/94", "home_team"=>"Liverpool", "away_team"=>"Ipswich", "home_team_goals"=>"1", "away_team_goals"=>"0"}).save
+Fixture.new({"fixture_date"=>"09/04/94", "home_team"=>"Man City", "away_team"=>"Newcastle", "home_team_goals"=>"2", "away_team_goals"=>"1"}).save
+Fixture.new({"fixture_date"=>"09/04/94", "home_team"=>"Norwich", "away_team"=>"Southampton", "home_team_goals"=>"4", "away_team_goals"=>"5"}).save
+Fixture.new({"fixture_date"=>"09/04/94", "home_team"=>"Sheffield Wednesday", "away_team"=>"QPR", "home_team_goals"=>"3", "away_team_goals"=>"1"}).save
+Fixture.new({"fixture_date"=>"09/04/94", "home_team"=>"West Ham", "away_team"=>"Everton", "home_team_goals"=>"0", "away_team_goals"=>"1"}).save
+Fixture.new({"fixture_date"=>"11/04/94", "home_team"=>"Blackburn", "away_team"=>"Aston Villa", "home_team_goals"=>"1", "away_team_goals"=>"0"}).save
+Fixture.new({"fixture_date"=>"13/04/94", "home_team"=>"QPR", "away_team"=>"Chelsea", "home_team_goals"=>"1", "away_team_goals"=>"1"}).save
+Fixture.new({"fixture_date"=>"16/04/94", "home_team"=>"Arsenal", "away_team"=>"Chelsea", "home_team_goals"=>"1", "away_team_goals"=>"0"}).save
+Fixture.new({"fixture_date"=>"16/04/94", "home_team"=>"Coventry", "away_team"=>"Sheffield Wednesday", "home_team_goals"=>"1", "away_team_goals"=>"1"}).save
+Fixture.new({"fixture_date"=>"16/04/94", "home_team"=>"Ipswich", "away_team"=>"Swindon", "home_team_goals"=>"1", "away_team_goals"=>"1"}).save
+Fixture.new({"fixture_date"=>"16/04/94", "home_team"=>"Liverpool", "away_team"=>"Newcastle", "home_team_goals"=>"0", "away_team_goals"=>"2"}).save
+Fixture.new({"fixture_date"=>"16/04/94", "home_team"=>"Man City", "away_team"=>"Norwich", "home_team_goals"=>"1", "away_team_goals"=>"1"}).save
+Fixture.new({"fixture_date"=>"16/04/94", "home_team"=>"Oldham", "away_team"=>"West Ham", "home_team_goals"=>"1", "away_team_goals"=>"2"}).save
+Fixture.new({"fixture_date"=>"16/04/94", "home_team"=>"QPR", "away_team"=>"Everton", "home_team_goals"=>"2", "away_team_goals"=>"1"}).save
+Fixture.new({"fixture_date"=>"16/04/94", "home_team"=>"Sheffield United", "away_team"=>"Aston Villa", "home_team_goals"=>"1", "away_team_goals"=>"2"}).save
+Fixture.new({"fixture_date"=>"16/04/94", "home_team"=>"Southampton", "away_team"=>"Blackburn", "home_team_goals"=>"3", "away_team_goals"=>"1"}).save
+Fixture.new({"fixture_date"=>"16/04/94", "home_team"=>"Wimbledon", "away_team"=>"Man United", "home_team_goals"=>"1", "away_team_goals"=>"0"}).save
+Fixture.new({"fixture_date"=>"17/04/94", "home_team"=>"Leeds", "away_team"=>"Tottenham", "home_team_goals"=>"2", "away_team_goals"=>"0"}).save
+Fixture.new({"fixture_date"=>"19/04/94", "home_team"=>"Arsenal", "away_team"=>"Wimbledon", "home_team_goals"=>"1", "away_team_goals"=>"1"}).save
+Fixture.new({"fixture_date"=>"23/04/94", "home_team"=>"Aston Villa", "away_team"=>"Arsenal", "home_team_goals"=>"1", "away_team_goals"=>"2"}).save
+Fixture.new({"fixture_date"=>"23/04/94", "home_team"=>"Chelsea", "away_team"=>"Leeds", "home_team_goals"=>"1", "away_team_goals"=>"1"}).save
+Fixture.new({"fixture_date"=>"23/04/94", "home_team"=>"Everton", "away_team"=>"Coventry", "home_team_goals"=>"0", "away_team_goals"=>"0"}).save
+Fixture.new({"fixture_date"=>"23/04/94", "home_team"=>"Man United", "away_team"=>"Man City", "home_team_goals"=>"2", "away_team_goals"=>"0"}).save
+Fixture.new({"fixture_date"=>"23/04/94", "home_team"=>"Newcastle", "away_team"=>"Oldham", "home_team_goals"=>"3", "away_team_goals"=>"2"}).save
+Fixture.new({"fixture_date"=>"23/04/94", "home_team"=>"Norwich", "away_team"=>"Sheffield United", "home_team_goals"=>"0", "away_team_goals"=>"1"}).save
+Fixture.new({"fixture_date"=>"23/04/94", "home_team"=>"Sheffield Wednesday", "away_team"=>"Ipswich", "home_team_goals"=>"5", "away_team_goals"=>"0"}).save
+Fixture.new({"fixture_date"=>"23/04/94", "home_team"=>"Swindon", "away_team"=>"Wimbledon", "home_team_goals"=>"2", "away_team_goals"=>"4"}).save
+Fixture.new({"fixture_date"=>"23/04/94", "home_team"=>"Tottenham", "away_team"=>"Southampton", "home_team_goals"=>"3", "away_team_goals"=>"0"}).save
+Fixture.new({"fixture_date"=>"23/04/94", "home_team"=>"West Ham", "away_team"=>"Liverpool", "home_team_goals"=>"1", "away_team_goals"=>"2"}).save
+Fixture.new({"fixture_date"=>"24/04/94", "home_team"=>"Blackburn", "away_team"=>"QPR", "home_team_goals"=>"1", "away_team_goals"=>"1"}).save
+Fixture.new({"fixture_date"=>"26/04/94", "home_team"=>"Wimbledon", "away_team"=>"Oldham", "home_team_goals"=>"3", "away_team_goals"=>"0"}).save
+Fixture.new({"fixture_date"=>"27/04/94", "home_team"=>"Chelsea", "away_team"=>"Swindon", "home_team_goals"=>"2", "away_team_goals"=>"0"}).save
+Fixture.new({"fixture_date"=>"27/04/94", "home_team"=>"Leeds", "away_team"=>"Man United", "home_team_goals"=>"0", "away_team_goals"=>"2"}).save
+Fixture.new({"fixture_date"=>"27/04/94", "home_team"=>"Newcastle", "away_team"=>"Aston Villa", "home_team_goals"=>"5", "away_team_goals"=>"1"}).save
+Fixture.new({"fixture_date"=>"27/04/94", "home_team"=>"QPR", "away_team"=>"Arsenal", "home_team_goals"=>"1", "away_team_goals"=>"1"}).save
+Fixture.new({"fixture_date"=>"27/04/94", "home_team"=>"West Ham", "away_team"=>"Blackburn", "home_team_goals"=>"1", "away_team_goals"=>"2"}).save
+Fixture.new({"fixture_date"=>"30/04/94", "home_team"=>"Arsenal", "away_team"=>"West Ham", "home_team_goals"=>"0", "away_team_goals"=>"2"}).save
+Fixture.new({"fixture_date"=>"30/04/94", "home_team"=>"Leeds", "away_team"=>"Everton", "home_team_goals"=>"3", "away_team_goals"=>"0"}).save
+Fixture.new({"fixture_date"=>"30/04/94", "home_team"=>"Liverpool", "away_team"=>"Norwich", "home_team_goals"=>"0", "away_team_goals"=>"1"}).save
+Fixture.new({"fixture_date"=>"30/04/94", "home_team"=>"Man City", "away_team"=>"Chelsea", "home_team_goals"=>"2", "away_team_goals"=>"2"}).save
+Fixture.new({"fixture_date"=>"30/04/94", "home_team"=>"Oldham", "away_team"=>"Sheffield Wednesday", "home_team_goals"=>"0", "away_team_goals"=>"0"}).save
+Fixture.new({"fixture_date"=>"30/04/94", "home_team"=>"QPR", "away_team"=>"Swindon", "home_team_goals"=>"1", "away_team_goals"=>"3"}).save
+Fixture.new({"fixture_date"=>"30/04/94", "home_team"=>"Sheffield United", "away_team"=>"Newcastle", "home_team_goals"=>"2", "away_team_goals"=>"0"}).save
+Fixture.new({"fixture_date"=>"30/04/94", "home_team"=>"Southampton", "away_team"=>"Aston Villa", "home_team_goals"=>"4", "away_team_goals"=>"1"}).save
+Fixture.new({"fixture_date"=>"30/04/94", "home_team"=>"Wimbledon", "away_team"=>"Tottenham", "home_team_goals"=>"2", "away_team_goals"=>"1"}).save
+Fixture.new({"fixture_date"=>"01/05/94", "home_team"=>"Ipswich", "away_team"=>"Man United", "home_team_goals"=>"1", "away_team_goals"=>"2"}).save
+Fixture.new({"fixture_date"=>"02/05/94", "home_team"=>"Coventry", "away_team"=>"Blackburn", "home_team_goals"=>"2", "away_team_goals"=>"1"}).save
+Fixture.new({"fixture_date"=>"03/05/94", "home_team"=>"Leeds", "away_team"=>"Sheffield Wednesday", "home_team_goals"=>"2", "away_team_goals"=>"2"}).save
+Fixture.new({"fixture_date"=>"03/05/94", "home_team"=>"Oldham", "away_team"=>"Sheffield United", "home_team_goals"=>"1", "away_team_goals"=>"1"}).save
+Fixture.new({"fixture_date"=>"03/05/94", "home_team"=>"QPR", "away_team"=>"West Ham", "home_team_goals"=>"0", "away_team_goals"=>"0"}).save
+Fixture.new({"fixture_date"=>"04/05/94", "home_team"=>"Chelsea", "away_team"=>"Coventry", "home_team_goals"=>"1", "away_team_goals"=>"2"}).save
+Fixture.new({"fixture_date"=>"04/05/94", "home_team"=>"Man United", "away_team"=>"Southampton", "home_team_goals"=>"2", "away_team_goals"=>"0"}).save
+Fixture.new({"fixture_date"=>"05/05/94", "home_team"=>"Oldham", "away_team"=>"Tottenham", "home_team_goals"=>"0", "away_team_goals"=>"2"}).save
+Fixture.new({"fixture_date"=>"07/05/94", "home_team"=>"Aston Villa", "away_team"=>"Liverpool", "home_team_goals"=>"2", "away_team_goals"=>"1"}).save
+Fixture.new({"fixture_date"=>"07/05/94", "home_team"=>"Blackburn", "away_team"=>"Ipswich", "home_team_goals"=>"0", "away_team_goals"=>"0"}).save
+Fixture.new({"fixture_date"=>"07/05/94", "home_team"=>"Chelsea", "away_team"=>"Sheffield United", "home_team_goals"=>"3", "away_team_goals"=>"2"}).save
+Fixture.new({"fixture_date"=>"07/05/94", "home_team"=>"Everton", "away_team"=>"Wimbledon", "home_team_goals"=>"3", "away_team_goals"=>"2"}).save
+Fixture.new({"fixture_date"=>"07/05/94", "home_team"=>"Newcastle", "away_team"=>"Arsenal", "home_team_goals"=>"2", "away_team_goals"=>"0"}).save
+Fixture.new({"fixture_date"=>"07/05/94", "home_team"=>"Norwich", "away_team"=>"Oldham", "home_team_goals"=>"1", "away_team_goals"=>"1"}).save
+Fixture.new({"fixture_date"=>"07/05/94", "home_team"=>"Sheffield Wednesday", "away_team"=>"Man City", "home_team_goals"=>"1", "away_team_goals"=>"1"}).save
+Fixture.new({"fixture_date"=>"07/05/94", "home_team"=>"Swindon", "away_team"=>"Leeds", "home_team_goals"=>"0", "away_team_goals"=>"5"}).save
+Fixture.new({"fixture_date"=>"07/05/94", "home_team"=>"Tottenham", "away_team"=>"QPR", "home_team_goals"=>"1", "away_team_goals"=>"2"}).save
+Fixture.new({"fixture_date"=>"07/05/94", "home_team"=>"West Ham", "away_team"=>"Southampton", "home_team_goals"=>"3", "away_team_goals"=>"3"}).save
+Fixture.new({"fixture_date"=>"08/05/94", "home_team"=>"Man United", "away_team"=>"Coventry", "home_team_goals"=>"0", "away_team_goals"=>"0"}).save
